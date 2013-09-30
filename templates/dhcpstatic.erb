@@ -1,3 +1,6 @@
 <% if mac != '' -%>
 <%= "dhcp-host=#{mac},#{ip},#{name}\n" -%>
 <% end -%>
+<% if ip != 'link' -%>
+<%= "host-record=#{name},#{name}.#{domain},#{ip}\n" -%>
+<% end -%>
